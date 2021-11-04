@@ -17,6 +17,7 @@ for _ in range(word_length):
 
 gameover = False
 checkword = ""
+lives = 6
 while gameover == False:
   print ("Current display status " + str(display))
   guess = input("Guess a letter: ").lower()
@@ -28,6 +29,8 @@ while gameover == False:
       #print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
       if letter == guess:
           display[position] = letter
+      else:
+        lives -= 1
           
           #print("chosen word is " + str(chosen_word))
   for i in range(len(display)):
